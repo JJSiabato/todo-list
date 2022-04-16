@@ -9,7 +9,7 @@ const Todo = ({completeTodo, todos, deleteTodo, updateTodo}) => {
     })
 
     const submitUpdate = value =>{
-        updateTodo(edit.id, value.id)
+        updateTodo(edit.id, value)
         setEdit({
             id:null,
             value:''
@@ -18,7 +18,7 @@ const Todo = ({completeTodo, todos, deleteTodo, updateTodo}) => {
 
     if (edit.id){
         return <TodoForm edit={edit} onSubmit={submitUpdate}/> 
-    }
+    } 
 
   return( 
       <>

@@ -21,7 +21,7 @@ const TodoList = () => {
     const updateTodo = (todoId, newValue)=>{
         if(!newValue.text || /^\s*$/.test(newValue.text)){
             return;
-        }
+        }        
         setTodos(prev => prev.map(item=> (item.id === todoId ? newValue : item)))
     }
     const completeTodo = id => {
@@ -39,7 +39,7 @@ const TodoList = () => {
         <TodoForm onSubmit={addTodo}/>
         <Todo 
         todos={todos} 
-        deleteTodo={deleteTodo} 
+        deleteTodo={deleteTodo}  
         completeTodo={completeTodo}
         updateTodo={updateTodo}/>
     </>
